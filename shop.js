@@ -90,7 +90,6 @@ function reloadcart() {
             <div><img src="${value.image}"/></div>
             <div>${value.name}</div>
             <div>${value.price.toLocaleString()}</div>
-            <div>${value.quantity}</div>
             <div>
                 <button onclick = "changeQuantity(${key}, ${value.quantity-1})">-</button>
                 <div class = "count">${value.quantity}</div>
@@ -104,3 +103,16 @@ function reloadcart() {
     quantity.innerText = count;
     
 }
+
+
+
+function changeQuantity(key, quantity) {
+    if (quantity == 0) {
+        delete listCards[key];
+    }else{
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity*products[key].price;
+    }
+    reloadcart()
+}
+

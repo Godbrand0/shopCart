@@ -100,9 +100,33 @@ header .shopping span{
 .list .item .price{
     margin: 10px;
 }
-.list .item .button{
+.list .item button{
     background-color: #1c1f25;
     color: #fff;
     padding: 10px;
     width: 100%;
+    cursor: pointer;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard button{
+    width: auto;
+    background-color: #fff5;
+    border: none;
+}
+.listCard .count{
+    margin: 0 10px;
 }
