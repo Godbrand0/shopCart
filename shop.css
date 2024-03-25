@@ -79,7 +79,7 @@ header .shopping span{
     color: #fff;
 }
 .active .card{
-    left: calc(100% -500px);
+    left: calc(100% - 500px);
 }
 .active .container{
     transform: translateX(-200px);
