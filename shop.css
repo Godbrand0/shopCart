@@ -7,10 +7,11 @@ body{
     margin: auto;
     transition: 0.5s;
 }
-.header{
+header{
     display: grid;
     grid-template-columns: 1fr 50px;
     margin-top: 50px;
+    align-items: center;
 }
 header .shopping{
     position: relative;
@@ -129,4 +130,71 @@ header .shopping span{
 }
 .listCard .count{
     margin: 0 10px;
+}
+
+@media screen and (max-width:600px) {
+    .list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      
+    }
+    .list .item{
+        width: 100px;
+        row-gap: 10px;
+        column-gap: 10px;
+     
+    }
+    .container{
+        width: 350px;
+        margin: auto;
+        transition: 0.5s;
+    }
+    .card{
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 250px;
+        
+        height: 90vh;
+        
+    }
+    .active .card{
+        left: calc(100% - 250px);
+    }
+    .active .container{
+        transform: translateX(-20px);
+    }
+    header h1{
+        font-size: 25px;
+        
+    }
+    header .shopping img{
+        width: 30px;
+    }
+    header .shopping span{
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        left: 58%;
+        padding: 2px 7px;
+    }
+    .listCard li{
+        display: grid;
+        grid-template-columns: 50px repeat(3, 1fr);
+        color: #fff;
+        row-gap: 10px;
+        margin-bottom: 20px;
+    }
+    .listCard li {
+        
+        margin-left: -30px;
+    }
+    .listCard li div:nth-child(2){
+        font-size: 13px;
+    }
 }
